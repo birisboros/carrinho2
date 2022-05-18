@@ -18,7 +18,7 @@ xmlhttp.open("GET", "highscr.txt", true);
 xmlhttp.send();
 
 var pontosLocal = localStorage.getItem("score"); 
-pontosBest1[0] = pontosBest[0];
+
 
 
 function score() {
