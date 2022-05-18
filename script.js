@@ -18,7 +18,7 @@ xmlhttp.open("GET", "highscr.txt", true);
 xmlhttp.send();
 
 var pontosLocal = localStorage.getItem("score"); 
-var pontosBest1 = document.getElementById("highscoreBest").innerHTML
+var pontosBest1 = pontosBest[0];
 
 
 function score() {
@@ -223,10 +223,7 @@ class  Personagem2{
                     pontosLocal = pontos;
                     localStorage.setItem("score", pontosLocal);
                 }
-                if (pontos > pontosLocal) {
-                    pontosLocal = pontos;
-                    localStorage.setItem("score", pontosLocal);
-                }
+                
                 
                 
             }
