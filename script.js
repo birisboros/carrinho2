@@ -17,7 +17,7 @@ xmlhttp.onload = function() {
   document.getElementById("highscoreBest").innerHTML = myObj.score;
   pponto= myObj.score;
 }
-xmlhttp.open("GET", "json_demo.txt");
+xmlhttp.open("GET", "highscr.txt");
 xmlhttp.send();
 
 var pontosLocal = localStorage.getItem("score"); 
