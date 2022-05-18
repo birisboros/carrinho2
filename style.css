@@ -1,0 +1,190 @@
+#playb{
+    display: flex;
+    width: 100vh;
+    justify-content: center;
+    padding-top: 5vh;
+  }
+#gameover{
+  position: absolute;
+  width: 100vh;
+  height: auto;
+  display: none;
+  flex-flow: column;
+  
+  padding-top: 30vh;
+  
+  
+  font-size: 3em;
+  color: #fc1c1c;
+  
+}
+.scorcentr{
+  margin: auto;
+ 
+}
+.highscr{
+  padding-top: 5vh;
+  font-size: 1rem;
+}
+
+#canvDiv{
+  padding-top:1vh;
+}
+canvas{
+    
+    display: block;
+    margin: auto;
+    border-style: outset;
+    border-width: 2px;
+    border-color: rgb(74, 74, 74); 
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+  width: 100vh;
+  height: 100vh;
+  background-image: url("cogus001.webp");
+  background-size: cover;
+}
+#placar{
+  position: relative;
+  display: flex;
+  width: 100vh;
+  height: auto;
+  justify-content: center;
+  padding-top: 2vh;
+}
+#placar2{
+  position: relative;
+  display: flex;
+  width: 100vh;
+  height: auto;
+  justify-content: center;
+  padding-top: 2vh;
+}
+#score{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 2vh;
+  width: 15em;
+  height: 5vh;
+  font-size: 2em;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 0 3px #252301, 0 0 5px #4b522a;
+  background: repeating-linear-gradient(
+  45deg,
+  #736c23,
+  #736c23 10px,
+  #000000 10px,
+  #000000 30px
+);
+border-style: outset;
+border-width: 2px;
+border-color: rgb(118, 118, 118); 
+}
+#time{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12em;
+  height: 5vh;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fab8b8;
+  text-shadow: 0 0 3px #252301, 0 0 5px #4b522a;
+  background: repeating-linear-gradient(
+  45deg,
+  #736c23,
+  #736c23 10px,
+  #000000 10px,
+  #000000 30px
+);
+border-style: outset;
+border-width: 2px;
+border-color: rgb(118, 118, 118);
+   
+}
+#botao{
+  display: flex;
+  width: 100vh;
+  justify-content: center;
+  padding-top: 5vh;
+}
+button{
+  font-size: 2em;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 0 3px #252301, 0 0 5px #4b522a;
+  background: repeating-linear-gradient(
+  45deg,
+  #736c23,
+  #736c23 10px,
+  #000000 10px,
+  #000000 30px
+);
+
+}
+#botao2 {
+  display: none;
+}
+#reset{
+  display: none;
+}
+
+@media (max-width:510px) {
+  body{
+    width: 100vw;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+  #playbut{
+    width: auto;
+    font-size: 1em;
+    }
+  #canvDiv{
+      padding-top:0;
+    }
+  #gameover{
+    width: 100%;
+    font-size: 2em;
+    
+  }
+  canvas{
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+  #score, #time, #botao, #placar, #placar2{
+    width: 100vw;
+    margin: 0;
+    padding: 1;
+  }
+  #botao2{
+   
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 1vh;
+    
+
+  }
+  #botao{
+    padding-top: 2vh;
+  }
+  #playb{
+    padding-top: 2vh;
+    width: auto;
+  }
+  button{
+    width: 30vw;
+  }
+  #reset{
+    font-size: 1em;
+    width: auto;
+  }
+}
