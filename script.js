@@ -223,7 +223,8 @@ class  Personagem2{
                     localStorage.setItem("score", pontosLocal);
                     if (pontosLocal > pontosBest) {
                         
-                        var arr = pontosLocal;
+                        var arr = [0];
+                        arr[0] - pontosBest[0];
                         $.ajax({
                         url: "score.php",
                         type: "POST",
