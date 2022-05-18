@@ -210,6 +210,7 @@ class  Personagem2{
     perdeu(){
         if ( (player1.position.y) >= canvas.height ) {
             player1.velo.y = 0;
+            var pontosBest1 = pontosBest[0];
             temporisador = pontuacao
             console.log("oi")
             document.getElementById("score").innerHTML= pontos;
@@ -226,7 +227,7 @@ class  Personagem2{
                     pontosLocal = pontos;
                     localStorage.setItem("score", pontosLocal);
                 }
-                var pontosBest1 = pontosBest[0];
+                
                 
             }
             return;
