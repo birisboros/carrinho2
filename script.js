@@ -229,6 +229,7 @@ class  Personagem2{
                     if (pontosLocal > pponto) {
                         
                         pponto= pontosLocal;
+                        myObj.score = pponto;
                     }
                 }
                 
