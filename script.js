@@ -13,14 +13,14 @@ pontosBest= [0];
 
 const xmlhttp = new XMLHttpRequest();
 xmlhttp.onload = function() {
-    pointb = this.responseText;
+    pointb = JSON.parse(this.responseText);
   
 }
 xmlhttp.open("GET", "score.php");
 xmlhttp.send();
 
 var pontosLocal = localStorage.getItem("score"); 
-JSON.parse(pointb.responseText);
+
 
 
 
