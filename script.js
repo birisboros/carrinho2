@@ -15,7 +15,7 @@ pontosBest = pointb;
 const xmlhttp = new XMLHttpRequest();
 xmlhttp.onload = function() {
   document.getElementById("highscoreBest").innerHTML = this.responseText;
-  console.log(pointb);
+  alert(pointb);
 }
 xmlhttp.open("GET", "score.php");
 xmlhttp.send();
