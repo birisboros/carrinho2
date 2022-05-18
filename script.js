@@ -20,6 +20,7 @@ xmlhttp.open("GET", "score.php");
 xmlhttp.send();
 
 var pontosLocal = localStorage.getItem("score"); 
+JSON.parse(pointb.responseText);
 
 
 
