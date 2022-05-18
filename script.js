@@ -9,12 +9,12 @@ var temporisador = 0;
 var pontuacao = -1;
 var pontos= 0;
 
-const xmlhttp = new XMLHttpRequest();
+var xmlhttp = new XMLHttpRequest();
 xmlhttp.onload = function() {
   const pontosBest = JSON.parse(this.responseText);
   document.getElementById("highscoreBest").innerHTML = pontosBest[0];
 };
-xmlhttp.open("GET", "score.php");
+xmlhttp.open("GET", "score.php", true);
 xmlhttp.send();
 
 var pontosLocal = localStorage.getItem("score"); 
