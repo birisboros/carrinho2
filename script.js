@@ -10,10 +10,10 @@ var pontuacao = -1;
 var pontos= 0;
 pontosBest= [0];
 pointb= [0];
-
+let  pponto;
 const xmlhttp = new XMLHttpRequest();
 xmlhttp.onload = function() {
-    pointb = JSON.parse(this.responseText);
+  pponto = JSON.parse(this.responseText);
   
 }
 xmlhttp.open("GET", "score.php");
