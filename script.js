@@ -12,12 +12,12 @@ var pontos= 0;
 
 const dbParam = JSON.stringify({"limit":1});
 
-const xmlhttp2 = new XMLHttpRequest();
-xmlhttp2.onload = function() {
+const xmlhttp = new XMLHttpRequest();
+xmlhttp.onload = function() {
   document.getElementById("highscoreBest").innerHTML = this.responseText;
 }
-xmlhttp2.open("GET", "score.php?x=" + dbParam);
-xmlhttp2.send();
+xmlhttp.open("GET", "score.php?x=" + dbParam);
+xmlhttp.send();
 
 var pontosLocal = localStorage.getItem("score"); 
 
