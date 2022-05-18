@@ -14,11 +14,11 @@ xmlhttp.onload = function() {
   const pontosBest = JSON.parse(this.responseText);
   document.getElementById("highscoreBest").innerHTML = pontosBest[0];
 };
-xmlhttp.open("GET", "highscr.txt");
+xmlhttp.open("GET", "score.php");
 xmlhttp.send();
 
 var pontosLocal = localStorage.getItem("score"); 
-var pontosBest1 = pontosBest[0];
+
 
 
 function score() {
@@ -222,6 +222,11 @@ class  Personagem2{
                     pontosLocal = pontos;
                     localStorage.setItem("score", pontosLocal);
                 }
+                if (pontos > pontosLocal) {
+                    pontosLocal = pontos;
+                    localStorage.setItem("score", pontosLocal);
+                }
+                var pontosBest1 = pontosBest[0];
                 
             }
             return;
