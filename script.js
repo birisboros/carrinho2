@@ -8,9 +8,9 @@ let cara = "ferrari004.png";
 var temporisador = 0;
 var pontuacao = -1;
 var pontos= 0;
-
-
-
+pontosBest= [0];
+pointb = document.getElementById("highscoreBest").innerHTML
+pontosBest = pointb;
 
 const xmlhttp = new XMLHttpRequest();
 xmlhttp.onload = function() {
