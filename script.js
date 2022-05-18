@@ -8,13 +8,16 @@ let cara = "ferrari004.png";
 var temporisador = 0;
 var pontuacao = -1;
 var pontos= 0;
-var xmlhttp = new XMLHttpRequest();
+
+
+const dbParam = JSON.stringify({"limit":1});
+
+const xmlhttp2 = new XMLHttpRequest();
 xmlhttp.onload = function() {
-  const pontosBest = JSON.parse(this.responseText);
-  document.getElementById("highscoreBest").innerHTML= "All Time Best:" + pontosBest[0];
-};
-xmlhttp.open("GET", "score.php", true);
-xmlhttp.send();
+  document.getElementById("highscoreBest").innerHTML = this.responseText;
+}
+xmlhttp2.open("GET", "score.php?x=" + dbParam);
+xmlhttp2.send();
 
 var pontosLocal = localStorage.getItem("score"); 
 
