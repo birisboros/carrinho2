@@ -13,7 +13,7 @@ var pontos= 0;
 const dbParam = JSON.stringify({"limit":1});
 
 const xmlhttp2 = new XMLHttpRequest();
-xmlhttp.onload = function() {
+xmlhttp2.onload = function() {
   document.getElementById("highscoreBest").innerHTML = this.responseText;
 }
 xmlhttp2.open("GET", "score.php?x=" + dbParam);
