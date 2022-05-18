@@ -10,13 +10,13 @@ var pontuacao = -1;
 var pontos= 0;
 
 
-const dbParam = JSON.stringify({"limit":1});
+
 
 const xmlhttp = new XMLHttpRequest();
 xmlhttp.onload = function() {
   document.getElementById("highscoreBest").innerHTML = this.responseText;
 }
-xmlhttp.open("GET", "score.php?x=" + dbParam);
+xmlhttp.open("GET", "score.php");
 xmlhttp.send();
 
 var pontosLocal = localStorage.getItem("score"); 
