@@ -12,7 +12,7 @@ pontosBest1 = [555];
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onload = function() {
   const pontosBest = JSON.parse(this.responseText);
-  
+  document.getElementById("highscoreBest").innerHTML= "All Time Best:" + pontosBest[0];
 };
 xmlhttp.open("GET", "highscr.txt", true);
 xmlhttp.send();
@@ -216,7 +216,7 @@ class  Personagem2{
             document.getElementById("score").innerHTML= pontos;
             document.getElementById("gameover").style= "display: flex;"
             document.getElementById("highscoreLocal").innerHTML= "Your Best:" + pontosLocal;
-            document.getElementById("highscoreBest").innerHTML= "All Time Best:" + pontosBest[0];
+            
             if (temporisador === pontuacao){
                 document.getElementById("score").innerHTML= "SCORE :" + " " + " " + pontos;
                 if (pontos > pontosLocal) {
