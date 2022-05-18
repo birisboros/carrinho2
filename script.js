@@ -14,11 +14,11 @@ xmlhttp.onload = function() {
   const pontosBest = JSON.parse(this.responseText);
   document.getElementById("highscoreBest").innerHTML = pontosBest[0];
 };
-xmlhttp.open("GET", "score.php", true);
+xmlhttp.open("GET", "highscr.txt", true);
 xmlhttp.send();
 
 var pontosLocal = localStorage.getItem("score"); 
-
+var pontosBest1 = document.getElementById("highscoreBest").innerHTML
 
 
 function score() {
@@ -210,7 +210,7 @@ class  Personagem2{
     perdeu(){
         if ( (player1.position.y) >= canvas.height ) {
             player1.velo.y = 0;
-            var pontosBest1 = pontosBest[0];
+            
             temporisador = pontuacao
             console.log("oi")
             document.getElementById("score").innerHTML= pontos;
