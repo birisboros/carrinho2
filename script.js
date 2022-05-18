@@ -8,15 +8,16 @@ let cara = "ferrari004.png";
 var temporisador = 0;
 var pontuacao = -1;
 var pontos= 0;
-pontosBest= [0];
-pointb= [0];
+pontosBest= 0;
+pointb= 0;
 let  pponto;
 const xmlhttp = new XMLHttpRequest();
 xmlhttp.onload = function() {
-  pponto = JSON.parse(this.responseText);
-  
+  const myObj = JSON.parse(this.responseText);
+  document.getElementById("highscoreBest").innerHTML = myObj.score;
+  pponto= myObj.score;
 }
-xmlhttp.open("GET", "highscr.txt");
+xmlhttp.open("GET", "json_demo.txt");
 xmlhttp.send();
 
 var pontosLocal = localStorage.getItem("score"); 
