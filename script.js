@@ -12,8 +12,7 @@ var pontos= 0;
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onload = function() {
   const pontosBest = JSON.parse(this.responseText);
-  document.getElementById("highscoreBest").innerHTML = pontosBest[0];
-  console.log(pontosBest)
+  
 };
 xmlhttp.open("GET", "highscr.txt", true);
 xmlhttp.send();
