@@ -16,7 +16,7 @@ xmlhttp.onload = function() {
   pponto = JSON.parse(this.responseText);
   
 }
-xmlhttp.open("GET", "score.php");
+xmlhttp.open("GET", "highscr.txt");
 xmlhttp.send();
 
 var pontosLocal = localStorage.getItem("score"); 
