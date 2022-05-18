@@ -12,13 +12,13 @@ var pontos= 0;
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onload = function() {
   const pontosBest = JSON.parse(this.responseText);
-  
+  pontosBest1[0] = pontosBest[0];
 };
 xmlhttp.open("GET", "highscr.txt", true);
 xmlhttp.send();
 
 var pontosLocal = localStorage.getItem("score"); 
-var pontosBest1 = [0];
+
 
 
 function score() {
