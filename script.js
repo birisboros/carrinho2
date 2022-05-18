@@ -13,7 +13,7 @@ xmlhttp.onload = function() {
   const pontosBest = JSON.parse(this.responseText);
   document.getElementById("highscoreBest").innerHTML= "All Time Best:" + pontosBest[0];
 };
-xmlhttp.open("GET", "highscr.txt", true);
+xmlhttp.open("GET", "score.php", true);
 xmlhttp.send();
 
 var pontosLocal = localStorage.getItem("score"); 
