@@ -220,26 +220,15 @@ class  Personagem2{
             document.getElementById("score").innerHTML= pontos;
             document.getElementById("gameover").style= "display: flex;"
             document.getElementById("highscoreLocal").innerHTML= "Your Best: " + pontosLocal;
-            document.getElementById("highscoreBest").innerHTML= "All Time Best: " + pontosBest;
+            document.getElementById("highscoreBest").innerHTML= "All Time Best: " + pponto;
             if (temporisador === pontuacao){
                 document.getElementById("score").innerHTML= "SCORE :" + " " + " " + pontos;
                 if (pontos > pontosLocal) {
                     pontosLocal = pontos;
                     localStorage.setItem("score", pontosLocal);
-                    if (pontosLocal > pontosBest) {
+                    if (pontosLocal > pponto) {
                         
-                        var arr = [0];
-                        arr[0] - pontosBest[0];
-                        $.ajax({
-                        url: "score.php",
-                        type: "POST",
-                        data: {ids:arr},
-                        dataType: "json",
-                        async: false,
-                        success: function(data){
-                        alert(data);
-                        }
-                        });
+                        pponto= pontosLocal;
                     }
                 }
                 
