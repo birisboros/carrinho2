@@ -218,8 +218,8 @@ class  Personagem2{
             console.log("oi")
             document.getElementById("score").innerHTML= pontos;
             document.getElementById("gameover").style= "display: flex;"
-            document.getElementById("highscoreLocal").innerHTML= "Your Best:" + pontosLocal;
-            
+            document.getElementById("highscoreLocal").innerHTML= "Your Best: " + pontosLocal;
+            document.getElementById("highscoreBest").innerHTML= "All Time Best: " + pontosBest;
             if (temporisador === pontuacao){
                 document.getElementById("score").innerHTML= "SCORE :" + " " + " " + pontos;
                 if (pontos > pontosLocal) {
