@@ -8,7 +8,6 @@ let cara = "ferrari004.png";
 var temporisador = 0;
 var pontuacao = -1;
 var pontos= 0;
-pontosBest1 = [555];
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onload = function() {
   const pontosBest = JSON.parse(this.responseText);
@@ -222,7 +221,22 @@ class  Personagem2{
                 if (pontos > pontosLocal) {
                     pontosLocal = pontos;
                     localStorage.setItem("score", pontosLocal);
+                    if (pontosLocal > pontosBest) {
+                        
+                        var arr = pontosLocal;
+                        $.ajax({
+                        url: "score.php",
+                        type: "POST",
+                        data: {ids:arr},
+                        dataType: "json",
+                        async: false,
+                        success: function(data){
+                        alert(data);
+                        }
+                        });
+                    }
                 }
+                
                 
                 
                 
