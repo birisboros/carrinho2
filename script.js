@@ -10,17 +10,10 @@ var pontuacao = -1;
 var pontos= 0;
 pontosBest= 0;
 pointb= 0;
-let  pponto;
-const xmlhttp = new XMLHttpRequest();
-xmlhttp.onload = function() {
-  const myObj = JSON.parse(this.responseText);
-  document.getElementById("highscoreBest").innerHTML = myObj.score;
-  pponto= myObj.score;
-}
-xmlhttp.open("GET", "highscr.txt");
-xmlhttp.send();
 
-var pontosLocal = localStorage.getItem("score"); 
+
+var pontosLocal = localStorage.getItem("score");
+var pontosSession = sessionStorage.getItem("score"); 
 
 
 
@@ -219,17 +212,17 @@ class  Personagem2{
             console.log("oi")
             document.getElementById("score").innerHTML= pontos;
             document.getElementById("gameover").style= "display: flex;"
-            document.getElementById("highscoreLocal").innerHTML= "Your Best: " + pontosLocal;
-            document.getElementById("highscoreBest").innerHTML= "All Time Best: " + pponto;
+            document.getElementById("highscoreLocal").innerHTML= "Your Best: " + pontosSession;
+            document.getElementById("highscoreBest").innerHTML= "All Time Best: " + pontosLocal;
             if (temporisador === pontuacao){
                 document.getElementById("score").innerHTML= "SCORE :" + " " + " " + pontos;
-                if (pontos > pontosLocal) {
-                    pontosLocal = pontos;
-                    localStorage.setItem("score", pontosLocal);
-                    if (pontosLocal > pponto) {
+                if (pontos > pontosSession) {
+                    pontosSession = pontos;
+                    sessionStorage.setItem("score", pontosSession);
+                    if (pontosSession> pontosLocal) {
                         
-                        pponto= pontosLocal;
-                        myObj.score = pponto;
+                        
+                        localStorage.setItem("score", pontosSession);
                     }
                 }
                 
